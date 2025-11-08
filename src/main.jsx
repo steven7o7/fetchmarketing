@@ -11,7 +11,7 @@ import './styles/globals.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/fetchmarketing">
+    <BrowserRouter>
       <App /* ParticleCanvas={ParticleCanvas} */ />
     </BrowserRouter>
   </React.StrictMode>
