@@ -34,20 +34,14 @@ export default function Reveal({
   }, [threshold]);
 
   // Direction-based transform classes
-  const directionClasses = {
-    right: 'translate-x-10',
-    left: '-translate-x-10',
-    up: 'translate-y-10',
-    down: '-translate-y-10',
-  };
-
+  // Simpler, cleaner animation - just fade and slight upward movement
   const baseClasses = prefersReducedMotion 
     ? '' 
-    : `opacity-0 ${directionClasses[direction] || directionClasses.right} transition-all duration-700 ease-out`;
+    : 'reveal';
   
   const visibleClasses = prefersReducedMotion 
     ? '' 
-    : 'opacity-100 translate-x-0 translate-y-0';
+    : 'visible';
 
   return (
     <div
