@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
 import useScrollSpy from '../hooks/useScrollSpy';
+import SEO from '../components/SEO';
 
 import Hero from '../components/sections/Hero';
 import WorkGrid from '../components/sections/WorkGrid';
@@ -18,6 +19,7 @@ export default function Home({ ParticleCanvas }) {
   useEffect(()=>{ document.title = 'FetchMarketing – AI‑Driven Marketing'; },[]);
   return (
     <>
+      <SEO />
       <Hero ParticleCanvas={ParticleCanvas} />
       <WorkGrid />
       <AboutSplit />
